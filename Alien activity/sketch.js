@@ -29,7 +29,6 @@ function draw() {
   fill(255, 0, 100); // Pink dots
   noStroke();
   ellipse(130, 50, 15, 15); // Left dot
-  //The first one moves the dot to right and the rest accordingly
   ellipse(270, 50, 15, 15); // Right dot
-  //This moves the right antennaes dot
+
 }
