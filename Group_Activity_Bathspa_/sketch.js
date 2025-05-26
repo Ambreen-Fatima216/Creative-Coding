@@ -7,10 +7,10 @@ let customFont;
 let bgImg;
 
 function preload() {
-  // Load the custom font
+  // Loading the custom font
   customFont = loadFont('PlaywriteHU-VariableFont_wght.ttf');
 
-  // Load the background image
+  // Loading the background image
   bgImg = loadImage('BG.jpg'); // Make sure this file is in your project folder
 }
 
@@ -23,8 +23,8 @@ function setup() {
 }
 
 function draw() {
-  // Draw the background image
-  background(0); // fallback color
+  // the background image
+  background(0); 
   image(bgImg, 0, 0, width, height);
 
   fill(255); // brighter text to contrast background
