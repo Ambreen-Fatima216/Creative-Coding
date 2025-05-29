@@ -1,22 +1,41 @@
+// This variable controls how far up or down the burger is
+let animate = -150;  // Starts the burger above the canvas
+
 function setup() {
-  createCanvas(400, 300);
-  background(180); // Light gray background
+  createCanvas(400, 400);
+  noStroke();
 }
 
 function draw() {
-  // Car body
-  fill(150, 0, 255); // Purple color
-  stroke(0);
-  rect(120, 150, 160, 50); // Main car body
-  // Car top
-  fill(150, 0, 255); // Same purple color
-  rect(160, 130, 80, 30); // Smaller top section
-  // Windows
-  fill(200, 200, 255); // Light blue windows
-  rect(150, 130, 30, 20); // Left window
-  rect(170, 130, 30, 20); // Right window
-  // Wheels
-  fill(350); // Black wheels
-  ellipse(140, 200, 30, 30); // Left wheel
-  ellipse(260, 200, 30, 30); // Right wheel
+  background(220);
+
+  // Makes the burger move down slowly
+  if (animate < 0) {
+    animate = animate + 1;  // Moves down by 1 pixel per frame
+  }
+
+  // Drawing the burger parts, adding animate to their y axis positions
+  // Top Bun
+  fill(255, 204, 102);
+  arc(225, 225 + animate, 250, 100, PI, 0);
+
+  // Lettuce
+  fill(124, 252, 0);
+  rect(100, 225 + animate, 250, 25);
+
+  // Ketchup
+  fill(255, 99, 71);
+  rect(100, 250 + animate, 250, 25);
+
+  // Mustard
+  fill(255, 223, 0);
+  rect(100, 275 + animate, 250, 25);
+
+  // Patty
+  fill(101, 67, 33);
+  rect(100, 300 + animate, 250, 50);
+
+  // Bottom Bun
+  fill(255, 204, 102);
+  rect(100, 350 + animate, 250, 50);
 }
